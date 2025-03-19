@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//stack raboti taka sto posledniot clen koj sme go stavile prv go vadime
+//stack raboti taka sto posledniot clen koj sme go stavile prv go vadime :)
 struct stack{
   int s[10],top;
 
