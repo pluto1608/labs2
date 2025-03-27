@@ -36,7 +36,7 @@ struct queue{
     return q[f]; //ako ima clen vo nizata go gleda bez da se pomesti f
   }
   int len(){
-    return r-f+1;
+    return r-f+1;//+1 z.s. pr ima 3 clena f=0 r=2 r-f=2 a ima 3 clena
   }
 };
 
