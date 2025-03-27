@@ -35,10 +35,13 @@ struct queue{
     if(f==-1)underflow();
     return q[f]; //ako ima clen vo nizata go gleda bez da se pomesti f
   }
+  int len(){
+    return r-f+1;
+  }
 };
 
-void funk(queue q, queue q1,int c) {
-  int n;
+void funk(queue q, queue q1) {
+  int n,c=q.len();
   for (int i=0;i<c-1;i++) {
     n=q.pull();//se zema cifrata koja prva e stavena vo q
     if ( (n+q.peek())<=9 ) {//se proveruva dali zbirot na odredena cifra i slednata e pomal ili ednakov na 9
@@ -69,5 +72,5 @@ int main(){
   for (int i=0;i<c;i++) {//se prevrtuva brojot i se stava vo red
     q.put(a[c-1-i]);
   }
-  funk(q,q1,c);
+  funk(q,q1);
 }
